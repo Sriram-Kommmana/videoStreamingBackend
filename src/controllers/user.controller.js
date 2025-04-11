@@ -325,7 +325,7 @@ const getWatchHistory = asyncHandler(async(req,res)=>{
     const user = await User.aggregate([
         {
             $match:{
-                _id: new mongoose.Types.ObjectId(req.user._id) //idhar ye kyu use kiya dhoondho
+                _id: mongoose.Types.ObjectId(req.user._id) //idhar ye kyu use kiya dhoondho
             }
         },
         {
